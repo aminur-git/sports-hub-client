@@ -1,0 +1,11 @@
+.shiliguri{
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.bangla{
+   font-family: "Tiro Bangla", serif;
+}
+
+a.active{
+  font-weight: bold;
+}
