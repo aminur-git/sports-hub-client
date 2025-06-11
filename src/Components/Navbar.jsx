@@ -5,8 +5,9 @@ const Navbar = () => {
 
     const links = <>
     
-    <NavLink className={'px-3'} to={'/'}>হোম</NavLink>
-    <NavLink to={"/shop"}>কেনাকাটা</NavLink>
+    <NavLink to={'/'}>হোম</NavLink>
+    <NavLink  to={"/shop"}>কেনাকাটা</NavLink>
+    <NavLink to={'/add-product'}>নতুন প্রোডাক্ট</NavLink>
     <NavLink to={'/blog'}>ব্লগ</NavLink>
     <NavLink to={'/pages'}>আমাদের সম্পর্কে</NavLink>
     
@@ -14,7 +15,7 @@ const Navbar = () => {
 
 
   return (
-    <div>
+    <div className="py-5">
       <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">
@@ -42,10 +43,10 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Sports<span className="text-yellow-400">Hub</span></a>
+          <a className="text-2xl font-black md:text-4xl">Sports<span className="text-yellow-400 pl-2">Hub</span></a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 space-x-10 text-lg">
+          <ul className="menu menu-horizontal px-1 space-x-10 text-xl">
             {links}
           </ul>
         </div>

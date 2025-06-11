@@ -8,4 +8,11 @@
 
 a.active{
   font-weight: bold;
+  color: rgb(209, 105, 0);
+  padding-left: 6px;
+  border-left: 2px solid black;
+}
+
+a.active.home{
+  color: yellow;
 }
