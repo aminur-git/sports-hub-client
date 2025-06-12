@@ -9,14 +9,16 @@ const Shop = () => {
   const products = useLoaderData();
 
   // ✅ প্রতিটি প্রোডাক্টের জন্য readMore toggle ট্র্যাক করতে state
-  const [expandedIndex, setExpandedIndex] = useState(null);
 
   const truncateText = (text, limit = 200) => {
     if (!text) return "";
     return text.length > limit ? text.slice(0, limit) + "..." : text;
   };
 
-  return (
+  if (!products?.length) {
+    return <span className="text-4xl">Loading....</span>;
+  }
+  else return (
     <div className="max-w-11/12 mx-auto">
       <Navbar />
 
@@ -76,8 +78,8 @@ const Shop = () => {
                 <div className="flex justify-between  gap-4">
                   <div className="w-full">
                     <button className="btn-wide btn btn-warning text-black bangla">
-                    <TiShoppingCart /> {product.price}
-                  </button>
+                      <TiShoppingCart /> {product.price}
+                    </button>
                   </div>
                   <div className=" btn  btn-md btn-soft hover:text-white btn-secondary text-pink-500">
                     <FaRegHeart />
